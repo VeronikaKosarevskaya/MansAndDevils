@@ -1,0 +1,18 @@
+{% extends 'mad/base.html' %}
+
+{% block content %}
+<h1>{{tittle}}</h1>
+<ul>{{moves}}</ul>
+<form action="{% url 'game' %}" method="post">
+    {% csrf_token %}
+    <div class="form-error">{{ form.non_field_errors }}</div>
+    {% for f in form %}
+    <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
+    <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+<button type="submit">Ввод</button>
+</form>
+<ul>
+<li><a href="{% url 'home' %}">Back home with shame and pity</a></li>
+</ul>
+{% endblock %}

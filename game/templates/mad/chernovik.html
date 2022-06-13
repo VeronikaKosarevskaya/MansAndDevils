@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Введите ваши цифры:</p>
+<p><input name="numbers" pattern="[0-9]{,4}"></p>
+<button type="submit">ввод</button>
+
+{% for m in moves %}
+<li><h2>{{m}}</h2></li>
+{% endfor %}
+</body>
+</html>

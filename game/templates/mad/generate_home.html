@@ -1,0 +1,13 @@
+{% extends 'mad/base.html' %}
+
+{% block content %}
+<h1>{{tittle}}</h1>
+<form action="{% url 'generate_home' %}" method="post">
+{% csrf_token %}
+<button type="submit">Let's do it</button>
+    </form>
+<h4>{{moves}}</h4>
+<ul>
+<li><a href="{% url 'home' %}">Back home with shame and pity</a></li>
+</ul>
+{% endblock %}

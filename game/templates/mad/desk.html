@@ -1,0 +1,18 @@
+{% extends 'mad/base.html' %}
+
+{% block content %}
+<h1><a href="{% url 'home' %}">{{tittle}}</a></h1>
+<ul>
+{% for ch in champions %}
+<li>
+    <h2>{{ch.name}}</h2>
+    <p>{{ch.sex}}</p>
+    <p>{{ch.years_old}}</p>
+    <p>{{ch.time_create}}</p>
+    <hr>
+</li>
+{% endfor %}
+</ul>
+<li><a href="{% url 'moves' %}">See moves</a></li>
+<li><a href="{% url 'home' %}">Back home</a></li>
+{% endblock %}

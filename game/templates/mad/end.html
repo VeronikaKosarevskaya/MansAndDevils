@@ -1,0 +1,11 @@
+{% extends 'mad/base.html' %}
+
+{% block content %}
+<h1>{{tittle}}</h1>
+<h4>{{moves}}</h4>
+<h4>{{result}}</h4>
+<h4>{{end}}</h4>
+<li><a href="{% url 'for_glory' %}">Enter to registration and to the game</a></li>
+<li><a href="{% url 'desk' %}">About Champions</a></li>
+<li><a href="{% url 'home' %}">Back home</a></li>
+{% endblock %}
